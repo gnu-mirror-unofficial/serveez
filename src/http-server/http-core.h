@@ -75,7 +75,7 @@ struct http_socket
 {
   http_cache_t *cache;   /* a http file cache structure */
   char **property;       /* property list of a http request */
-  int contentlength;     /* the content length for the cgi pipe */
+  size_t contentlength;     /* the content length for the cgi pipe */
   int filelength;        /* content length for the http file */
   int keepalive;         /* how many requests left for a connection */
   off_t fileoffset;      /* file offset used by sendfile */
